@@ -1,9 +1,11 @@
-## how to use 
+## install laravelX.X
+
 ```
-git clone
+$ make create-project # Install the latest Laravel project
+$ make install-recommend-packages # Not required
 ```
 
-## install laravelX.X
+or
 
 ```
 $ docker-compose exec app bash
