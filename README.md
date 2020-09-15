@@ -1,3 +1,8 @@
+## how to use 
+```
+git clone
+```
+
 ## install laravelX.X
 
 ```
