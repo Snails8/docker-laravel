@@ -20,7 +20,7 @@ ENV TZ=UTC \
   DB_PASSWORD=secret \
   LOG_CHANNEL=stderr
 
-COPY --from=composer:1.10 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:2.0 /usr/bin/composer /usr/bin/composer
 
 RUN apt-get update && \
   apt-get -y install git libicu-dev libonig-dev libzip-dev unzip locales && \
@@ -32,7 +32,6 @@ RUN apt-get update && \
   docker-php-ext-install intl pdo_mysql zip bcmath && \
   composer config -g process-timeout 3600 && \
   composer config -g repos.packagist composer https://packagist.org && \
-  composer global require hirak/prestissimo
 
 COPY ./php-fpm.d/zzz-www.conf /usr/local/etc/php-fpm.d/zzz-www.conf
 COPY ./php.ini /usr/local/etc/php/php.ini
