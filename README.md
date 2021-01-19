@@ -1,3 +1,9 @@
+### docker-laravel
+
+```
+$ docker-compose up -d --build
+```
+
 ## install laravelX.X
 
 ```
@@ -19,9 +25,9 @@ Laravel Framework X.X.X
 ```
 ## version
 
-・php: 7.4-fpm-buster
+・php: 8.0-fpm-buster
 
-・composer: 1.10
+・composer: 2.0
 
 ・nginx: 1.18-alpine
 
